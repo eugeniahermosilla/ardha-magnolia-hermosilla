@@ -1,0 +1,16 @@
+{
+  "name": "ardha-magnolia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --include-path scss public/css/stylesheet.scss public/css/stylesheet.css",
+    "watch-css": "nodemon -e scss -x npm run build-css"
+  },
+  "author": "Eugenia Hermosilla",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  }
+}

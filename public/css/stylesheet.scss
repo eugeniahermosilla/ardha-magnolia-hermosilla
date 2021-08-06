@@ -1,0 +1,375 @@
+@import "colors";
+
+/**
+  * MOBILE FIRST
+**/
+
+/* Font configs */
+h1 {
+  font-family: "Taviraj", serif;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Taviraj", serif;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Taviraj", serif;
+  font-weight: 500;
+}
+
+h4 {
+  font-family: "Taviraj", serif;
+  font-weight: 400;
+}
+
+p,
+a,
+input {
+  font-family: "Taviraj", serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+button {
+  font-family: "Taviraj", serif;
+  font-weight: 200;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+/* General classes */
+.strikethrough {
+  text-decoration: line-through red;
+}
+
+/* Components */
+.buttonOutlined {
+  border: 1px solid $grey;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.mainButton {
+  background-color: $grey;
+  color: $white;
+  letter-spacing: 2%;
+  border-style: $grey solid;
+  transition: all 1s;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.devider {
+  width: 150px;
+  border-top: solid 1px $black;
+}
+
+.pageTitle {
+  background-color: $beige;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 80px;
+}
+
+.pageTitle__title {
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Menu */
+.mainMenu__mainLogo {
+  width: 50px;
+}
+
+.mainMenu__search {
+  position: relative;
+}
+
+.mainMenu__searchIcon {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+/* Portrait */
+.portrait {
+  background-color: $beige;
+}
+
+.portrait__portraitImageContainer {
+  padding: 0;
+}
+
+.portrait__portraitImage {
+  background: url("../images/portada.jpeg");
+  background-position: left center;
+  background-size: cover;
+  height: 300px;
+}
+
+.portrait__portraitTexts {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.portrait__portraitTexts {
+  button {
+    margin-top: 20px;
+  }
+
+  p {
+    margin-top: 30px;
+  }
+}
+
+/* Featured */
+.featured {
+  margin-top: 98px;
+  margin-bottom: 98px;
+}
+
+.featured__featuredList {
+  margin-top: 50px;
+}
+
+.featured__featuredItem {
+  margin-bottom: 35px;
+}
+
+.featured__featuredItemImage {
+  background: url(../images/monsatera.jpeg);
+  background-position: center bottom;
+  background-size: cover;
+  height: 350px;
+  margin-bottom: 35px;
+}
+
+.featuredItem__promotion {
+  color: $grey-light;
+}
+
+.featured__featuredBody {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.featured__strikethrough {
+  margin-bottom: 10px;
+}
+
+.featured__featuredItemTitle {
+  color: $grey;
+}
+
+.featured__featuredItemButtons {
+  margin-top: 30px;
+}
+
+.featured__subtitle {
+  text-align: center;
+  margin-top: 47px;
+  margin-bottom: 47px;
+}
+
+.featured {
+  .pageTitle {
+    margin-top: 126px;
+  }
+}
+
+/* Call to action box */
+.callToActionBox {
+  background-color: $beige;
+  margin-top: 98px;
+  margin-bottom: 98px;
+}
+
+.callToActionBox__content {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.callToActionBox__button {
+  margin-top: 30px;
+}
+
+.callToActionBox__image {
+  height: 400px;
+  background: url(../images/cactus.jpeg) center bottom;
+  background-size: cover;
+}
+
+/* Call to action media */
+.callToActionWithMedia {
+  position: relative;
+  margin-bottom: 98px;
+}
+
+.callToActionWithMedia__image {
+  height: 300px;
+  background-size: cover;
+}
+
+@for $i from 1 to 4 {
+  #image#{$i} {
+    background: url(../images/call-to-actions/planta#{$i}.png) right top;
+  }
+}
+
+.callToActionWithMedia__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black-transparent;
+  color: $white;
+}
+
+.callToActionWithMedia__content_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.callToActionWithMedia__button {
+  margin-top: 70px;
+}
+
+/* Plants Care */
+
+.plantsCare__image {
+  background: url(../images/cactus.jpeg) center center;
+  height: 250px;
+}
+
+/* Footer */
+.footer {
+  margin-bottom: 98px;
+}
+
+.footer__imageContainer {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.footer__imageContainer {
+  img {
+    height: 200px;
+    border-radius: 20px;
+  }
+}
+
+.footer__column {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@each $name-color, $bgcolor in $socialColors {
+  .footer__social__#{$name-color} {
+    color: $bgcolor;
+  }
+}
+
+/* TABLETS MEDIA QUERY */
+@media (min-width: 768px) {
+  /* Menu */
+  .mainLogo {
+    img {
+      width: 60px;
+    }
+  }
+
+  /* Portrait */
+  .portrait__portraitTexts {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Featured */
+  .featured__featuredItemImage {
+    height: 290px;
+  }
+
+  /* Call to action box */
+  .callToActionBox__content {
+    padding: 30px;
+  }
+
+  .callToActionBox__image {
+    height: 300px;
+  }
+}
+
+/* DESKTOP MEDIA QUERY */
+@media (min-width: 992px) {
+  /* Menu */
+  .mainLogo {
+    img {
+      width: 55px;
+    }
+  }
+
+  /* Portrait */
+  .portrait {
+    margin-top: 80px;
+  }
+
+  .portrait__portraitTexts {
+    height: 438px;
+  }
+
+  .portrait__portraitImageContainer {
+    position: relative;
+  }
+
+  .portrait__portraitImage {
+    position: absolute;
+    height: 561px;
+    top: -65px;
+    left: 0;
+    right: 0;
+  }
+
+  /* Call to action box */
+  .callToActionBox {
+    position: relative;
+  }
+
+  .callToActionBox__content {
+    height: 400px;
+  }
+
+  .callToActionBox__image {
+    height: 500px;
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+  }
+
+  /* Call to action media */
+
+  .callToActionWithMedia__image {
+    height: 500px;
+  }
+}
