@@ -46,6 +46,10 @@ button {
   text-decoration: line-through red;
 }
 
+nav {
+  background-color: unset;
+}
+
 /* Components */
 .buttonOutlined {
   border: 1px solid $grey;
@@ -73,8 +77,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 20px 40px;
   margin-bottom: 80px;
+
+  h1 {
+    margin: 0;
+  }
 }
 
 .pageTitle__title {
@@ -84,6 +92,7 @@ button {
 }
 
 /* Menu */
+
 .mainMenu__mainLogo {
   width: 50px;
 }
@@ -97,21 +106,22 @@ button {
   right: 15px;
   top: 10px;
 }
+.nav-link {
+  background-color: $white;
+}
+
+.nav-link:hover {
+  background-color: $beige;
+}
 
 /* Portrait */
 .portrait {
   background-color: $beige;
+  display: flex;
 }
 
 .portrait__portraitImageContainer {
   padding: 0;
-}
-
-.portrait__portraitImage {
-  background: url("../images/portada.jpeg");
-  background-position: left center;
-  background-size: cover;
-  height: 300px;
 }
 
 .portrait__portraitTexts {
@@ -127,6 +137,12 @@ button {
   p {
     margin-top: 30px;
   }
+}
+
+.portrait__carouselImage {
+  height: 400px;
+  background-size: cover !important;
+  background-position: center bottom !important;
 }
 
 /* Featured */
@@ -251,14 +267,89 @@ button {
 
 /* Plants Care */
 
+.plantsCare {
+  margin-bottom: 70px;
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
 .plantsCare__image {
   background: url(../images/cactus.jpeg) center center;
+  background-size: cover;
   height: 250px;
+}
+
+/* About Us */
+
+.aboutus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutus__image__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+
+  img {
+    height: 356px;
+    border-radius: 15px;
+  }
+}
+
+.aboutus_text_container {
+  margin-top: 35px;
+
+  p {
+    background-color: $beige;
+    padding: 20px;
+    margin-top: 66px;
+  }
+}
+
+/* Home Decoration */
+
+.homedecoration__Text_Container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  margin-top: 50px;
+  background-color: $beige;
+
+  h1,
+  h2,
+  p {
+    margin: 15px;
+  }
+}
+
+.homedecoration__Container {
+  height: 500px;
+  margin-top: 50px;
+}
+
+.homedecoration__carouselImage {
+  height: 500px;
+  width: 100%;
+  background-size: cover !important;
+  background-position: center center;
 }
 
 /* Footer */
 .footer {
   margin-bottom: 98px;
+
+  a {
+    text-decoration: none;
+    color: unset;
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 
 .footer__imageContainer {
@@ -319,6 +410,36 @@ button {
   .callToActionBox__image {
     height: 300px;
   }
+
+  /* Home Deco */
+
+  .homedecoration__Container {
+    height: 600px;
+  }
+
+  .homedecoration__carouselImage {
+    height: 600px;
+    background-position: center bottom !important;
+  }
+
+  /* Footer */
+  .footer {
+    margin-bottom: 98px;
+  }
+
+  .footer__imageContainer {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex-direction: column;
+  }
+
+  .footer__imageContainer {
+    img {
+      height: 200px;
+      border-radius: 20px;
+    }
+  }
 }
 
 /* DESKTOP MEDIA QUERY */
@@ -351,6 +472,10 @@ button {
     right: 0;
   }
 
+  .portrait__carouselImage {
+    height: 438px;
+  }
+
   /* Call to action box */
   .callToActionBox {
     position: relative;
@@ -368,8 +493,12 @@ button {
   }
 
   /* Call to action media */
-
   .callToActionWithMedia__image {
     height: 500px;
+  }
+
+  /* Plants care */
+  .plantsCare__image {
+    height: 350px;
   }
 }

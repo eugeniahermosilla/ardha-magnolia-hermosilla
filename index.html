@@ -31,7 +31,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="public/css/stylesheet.css" />
-    <link rel="stylesheet" href="public/css/home.css" />
     <link href="public/images/favicon.png" type="image/png" />
 
     <!-- Sripts -->
@@ -97,6 +96,11 @@
               </a>
             </li>
             <li class="nav-item active">
+              <a class="nav-link" href="homedecoration.html">
+                Ardha-Magnolia en casa <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item active">
               <a class="nav-link" href="aboutus.html">
                 Sobre nosotros <span class="sr-only">(current)</span>
               </a>
@@ -116,26 +120,73 @@
         </div>
       </nav>
 
-      <div class="container">
-        <div class="container">
-          <div class="row portrait">
-            <div class="col-sm-12 col-md-5 portraitImageContainer">
-              <div class="portrait__portraitImage"></div>
-            </div>
-            <div class="col-sm-12 col-md-7 portrait__portraitTexts">
-              <div>
-                <h1>ARDHA MAGNOLIA.</h1>
-                <div class="devider"></div>
-                <p>
-                  Somos apasionadxs de las plantas y esperamos porer
-                  compartirles todo lo lindo que nos transmiten
-                </p>
-                <button class="mainButton">Ver más</button>
+      <section class="container">
+        <div class="row portrait">
+          <div class="col-sm-12 col-md-5 portraitImageContainer">
+            <div
+              id="carouselExampleControls"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="portrait__carouselImage"
+                    style="background: url(public/images/monsatera.jpeg)"
+                  ></div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="portrait__carouselImage"
+                    style="background: url(public/images/cactus.jpeg)"
+                  ></div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="portrait__carouselImage"
+                    style="background: url(public/images/portada.jpeg)"
+                  ></div>
+                </div>
               </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-7 portrait__portraitTexts">
+            <div>
+              <h1>ARDHA MAGNOLIA.</h1>
+              <div class="devider"></div>
+              <p>
+                Somos apasionadxs de las plantas y esperamos porer compartirles
+                todo lo lindo que nos transmiten
+              </p>
+              <button class="mainButton">Ver más</button>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </header>
 
     <main>
@@ -340,14 +391,17 @@
               <p>
                 <strong>WhatsApp</strong>
               </p>
-              <p>
+              <a href="tel:08112338899">
                 <i class="fa fa-whatsapp footer__social__whatsapp"></i>
                 0811-233-8899
-              </p>
-              <p>
+              </a>
+              <a
+                href="https://www.instagram.com/ardha.magnolia/"
+                target="_blank"
+              >
                 <i class="fa fa-instagram footer__social__instagram"></i>
                 ardha.magnolia
-              </p>
+              </a>
             </div>
           </div>
         </div>
@@ -370,5 +424,6 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script src="public/js/main.js"></script>
   </body>
 </html>
